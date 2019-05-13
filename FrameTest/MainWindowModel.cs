@@ -32,6 +32,12 @@ namespace FrameTest
             set => Set(ref _buttonEnabled, value);
         }
 
+        public string Result
+        {
+            get => _result;
+            set => Set(ref _result, value);
+        }
+
         public RelayCommand ButtonClick => new RelayCommand(() =>
         {
             ButtonEnabled = false;
@@ -45,7 +51,7 @@ namespace FrameTest
                 Message = control.GetVIew();
                 MessageVisible = Visibility.Visible;
 
-                control.GetInput();
+                Result = control.GetInput();
 
                 MessageVisible = Visibility.Collapsed;
                 Message = null;

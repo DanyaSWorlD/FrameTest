@@ -8,13 +8,16 @@
         Title="MainWindow" Height="450" Width="800"
         d:DataContext="{d:DesignInstance local:MainWindowModel}">
     <Grid>
-        <Button Content="Начать!" 
+        <StackPanel Width="150" Height="80">
+            <Button Content="Начать!" 
                 Width="80"
                 Height="26"
                 IsEnabled="{Binding ButtonEnabled}"
                 Command="{Binding ButtonClick}"/>
 
-        <Label Content="{Binding }"></Label>
+            <Label Content="{Binding Result}" HorizontalAlignment="Center"/>
+        </StackPanel>
+
 
         <ContentPresenter Content="{Binding Message}" Visibility="{Binding MessageVisible}" Width="250" Height="100"/>
     </Grid>
