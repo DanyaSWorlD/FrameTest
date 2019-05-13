@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="250"
              d:DataContext="{d:DesignInstance model:PopupControlModel}">
-    <StackPanel>
+    <StackPanel Background="White">
         <Label Content="Ваш любимый цвет?"/>
         <TextBox Text="{Binding Text}" Margin="0,5,0,5"/>
         <Button Content="Подтвердить" Command="{Binding ButtonClick}"/>
