@@ -1,0 +1,21 @@
+﻿<Window x:Class="FrameTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrameTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        d:DataContext="{d:DesignInstance local:MainWindowModel}">
+    <Grid>
+        <Button Content="Начать!" 
+                Width="80"
+                Height="26"
+                IsEnabled="{Binding ButtonEnabled}"
+                Command="{Binding ButtonClick}"/>
+
+        <Label Content="{Binding }"></Label>
+
+        <ContentPresenter Content="{Binding Message}" Visibility="{Binding MessageVisible}" Width="250" Height="100"/>
+    </Grid>
+</Window>
